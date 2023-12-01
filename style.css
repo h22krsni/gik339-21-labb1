@@ -1,4 +1,48 @@
+body{
+  background-color: rgb(34, 31, 79);
+}
 
+h1{
+  color: aliceblue;
+  margin-top:5rem;
+}
+
+.wrapper{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  
+}
+
+.box{
+  border-radius: 2rem;
+  background-color: #f2f2f2;
+  padding:2rem;
+  margin: 0 15rem 0 ;
+
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 1rem;
+  margin: 1rem ;
+  display: inline-block;
+  border: 0.5px solid #c8c6c6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  inset-block-start: 20px;
+}
+
+
+input[type=checkbox], select {
+ 
+width: 1rem;
+height: 1rem; 
+box-sizing: border-box;
+}
+
+
+
+/*
 :root {
   --purple: #4b2582;
   --purple-hue: 265;
@@ -161,3 +205,4 @@ button:hover {
 .form-control input {
   flex-grow: 1;
 }
+*/
