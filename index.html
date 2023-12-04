@@ -11,33 +11,52 @@
   <body>
     <div class="wrapper">
       <h1>Labb 1 - Grupp 21</h1>
-      <div class= "row">
-      
+      <div class= "flex">
+      <form id="settings" class="settings">
+        <div class="input-group">
+          <label class="input-label" for="content">Innehåll</label>
+          <input class="input-field" type="text" id="content" name="content"/>                 
+        </div>
+        <div Class="input-group">
+          <label class="input-lable" for="color">Färg</label>
+          <input class="input-field" type="text" id="color" name="color" />
+        </div>
+        <div class="checkbox">
+          <label for="divStyle">Checkbox</label>
+          <input type="checkbox" namn="divStyle" id="divStyle" class="textfält"/>
+        </div>
+        <button Id="remove">Ta bort</button>
+      </form>
+     
+    </div>
+    <div id="dynamicDisplay"></div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
+
+
+
+
+       <!--  
       <div>
         <div id ="box" class="box">
           <div class="Färg">
             <label for ="color">Färg</label>
-            <input type="text" name="color" id="color"class="textfält"/>
+            <input type="text" name="color" id="color"class="textfield"/>
           </div>
           
           <div class="Innehåll">
             <label for="content">Innehåll</label>
-            <input type="text" namn="content" id="content" class="textfält"/>
+            <input type="text" namn="content" id="content" class="textfield"/>
           </div>
           
-          <div class="checkbox">
-            <label for="divStyle">Checkbox</label>
-            <input type="checkbox" namn="divStyle" id="divStyle" class="textfält"/>
-          </div>
+          
 
-          <button id="tbk">Ta bort</button>
+          <button id="button">Ta bort</button>
           <div id="divruta"></div>
 
         </div>
 
-      </div>
-      
-      <script src="script.js"></script>
-
-  </body>
-</html>
+      </div>-->

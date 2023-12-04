@@ -1,28 +1,38 @@
 // Uppgift 4-6
 //variabel
 const checkbox = document.getElementById("divStyle");
+const inputField = document.querySelectorAll('.input-field');
+const button = document.getElementsByTagName('button');
+const dynamicDisplay = document.getElementById("divruta");
+
 console.log(checkbox);
+console.log(dynamicDisplay);
+console.log(button);
+console.log(inputField);
 
-const text = document.getElementById("textfält");
-console.log(text);
+checkbox.addEventListener('change', function() {
+    for (let inputfield of inputgroup) {
+       if (inputField.name ==='color') {
+        dynamicDisplay.style.background = inputfield.value;
+      // messageBox.style.backgroundColor = textfield[0].value;
+       //button.style.backgroundcolor = textfield[0].value;
+       }
+   }
+}
+);
 
-const button = document.getElementById("tbk");
-console.log(tbk);
-
-const div = document.getElementById("divruta");
-console.log(divruta);
-
+/*
 //funktion
-function Eventhandle(e){
+function Eventhandle(e) {
     console.log(e.target);
     //console.log(e.target.name);//
     if (e.target.name ==='content') {
         const textinnehåll = e.target.value;
-        divruta.innerHTML = Textinnehåll
+        divruta.innerHTML = textinnehåll;
     }
 }
 
-const section = document.querySelector('.textfält');
+const section = document.querySelector('.textfield');
 section.addEventListener('text',Eventhandle)
 
 //function createBox(content){
@@ -31,22 +41,43 @@ section.addEventListener('text',Eventhandle)
   //  newElement.innerHTML =content;
   //  divruta.insertAdjacentElement('afterbegin', newElement);
 //}
-//eventlyssnare till checkbox
-checkbox.addEventListener('change',() =>{
-    if (checkbox.checked ===true){
-        messageBox.style.backgroundColor = textfält[0].value;
-        tbk.style.backgroundcolor = textfält[0].value;
+    //eventlyssnare till checkbox
+checkbox.addEventListener('change', function() {
+         for (let textfield of text) {
+            if (textfield.name ==='color') {
+             divruta.style.background = textfield.value;
+           // messageBox.style.backgroundColor = textfield[0].value;
+            //button.style.backgroundcolor = textfield[0].value;
+            }
+        }
     }
-    else{
-        messageBox.style.backgroundcolor = "transparent";
-    }
-});
+);
+   // else{
+      //  messageBox.style.backgroundcolor = "transparent";
+    //}
+//});
  
-//eventlyssnare till textfält
-testfield.forEach((field) =>field.addEventListener ('blur', handleEvent));
+for (let textfield of text) {
+    textfield.addEventListener(
+        'keydown', Eventhandle
+    );
+}
 
-//eventlyssnare till knapp
-tbk.addEventListener('click',() =>{
-    divruta.innerHTML = "";
-   
-});
+
+eventlyssnare till knapp
+button.addEventListener('click', () =>
+    divruta.remove()); */
+     
+
+inputField.forEach((field) => field.addEventListener('blur', handleBlur));
+
+for (let i = 0; i < button.length; i++) {
+  button[i].addEventListener('click', handleClick);
+}
+const output = document.getElementById('output');
+function handleBlur(e) {
+  const name = e.target.name;
+  const value = e.target.value;
+  
+}
+    
