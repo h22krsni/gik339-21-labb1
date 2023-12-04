@@ -8,6 +8,11 @@ h1{
   margin-top:5rem;
   text-align: center;
 }
+h2{
+  color: aliceblue;
+  margin-bottom: 2,5rem;
+  text-align: center;
+}
 
 .wrapper{
   color: rgb(0, 0, 0);
