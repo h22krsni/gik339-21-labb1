@@ -1,14 +1,45 @@
 // Uppgift 4-6
 //variabel
-const checkbox = document.getElementById("divStyle");
-const inputField = document.querySelectorAll('.input-field');
-const button = document.getElementsByTagName('button');
-const dynamicDisplay = document.getElementById("divruta");
+const checkbox = document.querySelector("divStyle");
+const textfield = document.getElementsByClassName('textfield');
+const button = document.getElementsById('button');
+const output = document.getElementById("output");
 
+function handleInput(e) {
+    const inputName = e.target.name;
+    console.log(e.target);
+
+    if(inputName === 'content') {
+        output.innerHTML = e.target.value;
+    }
+}
+
+for (let field of textfields) {
+    field.addEventListener('input', handleInput);
+    field.addEventListener('blur', handleInput);
+
+}
+
+checkbox.addEventListener('change', function() {
+    const colorInput = textfields[0];
+    if (checkbox.checked) {
+        output.style.backgroundColor = colorInput.value;
+    }
+    else {output.style.backgroundColor = '';
+    }
+});
+
+button.addEventListener('click', function() {
+    output.remove();
+    console.log('DIV:en "output" borttagen');
+});
+/*
 console.log(checkbox);
 console.log(dynamicDisplay);
 console.log(button);
 console.log(inputField);
+
+
 
 checkbox.addEventListener('change', function() {
     for (let inputfield of inputgroup) {
@@ -21,17 +52,20 @@ checkbox.addEventListener('change', function() {
 }
 );
 
-/*
+
 //funktion
 function Eventhandle(e) {
-    console.log(e.target);
+    console.log("Event triggered", e.target);
+    const fieldName = inputField;
+
+    /*
     //console.log(e.target.name);//
     if (e.target.name ==='content') {
         const textinnehåll = e.target.value;
         divruta.innerHTML = textinnehåll;
     }
-}
-
+} */
+/*
 const section = document.querySelector('.textfield');
 section.addEventListener('text',Eventhandle)
 
@@ -69,7 +103,7 @@ button.addEventListener('click', () =>
     divruta.remove()); */
      
 
-inputField.forEach((field) => field.addEventListener('blur', handleBlur));
+/*inputField.forEach((field) => field.addEventListener('blur', handleBlur));
 
 for (let i = 0; i < button.length; i++) {
   button[i].addEventListener('click', handleClick);
@@ -80,4 +114,4 @@ function handleBlur(e) {
   const value = e.target.value;
   
 }
-    
+ */

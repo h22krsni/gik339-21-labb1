@@ -11,52 +11,26 @@
   <body>
     <div class="wrapper">
       <h1>Labb 1 - Grupp 21</h1>
-      <div class= "flex">
-      <form id="settings" class="settings">
-        <div class="input-group">
-          <label class="input-label" for="content">Innehåll</label>
-          <input class="input-field" type="text" id="content" name="content"/>                 
+            <div class= "flex">
+              <div class="input-group">
+                <label  for="content">Innehåll</label>
+                <input  type="text" id="content" name="content" class="textfield"/>
+    </div>
+
+         <div class="input-group">
+          <label  for="color">Färg</label>
+          <input  type="text" id="color" name="color" class="textfield" />
         </div>
-        <div Class="input-group">
-          <label class="input-lable" for="color">Färg</label>
-          <input class="input-field" type="text" id="color" name="color" />
-        </div>
-        <div class="checkbox">
+
+        <div class="input-group checkbox">
           <label for="divStyle">Checkbox</label>
-          <input type="checkbox" namn="divStyle" id="divStyle" class="textfält"/>
+          <input type="checkbox" namn="divStyle" id="divStyle" class="checkbox"/>
         </div>
-        <button Id="remove">Ta bort</button>
+        <button Id="remove" class="button">Ta bort</button>
+        <div id="output"></div>
       </form>
      
-    </div>
-    <div id="dynamicDisplay"></div>
-
     <script src="script.js"></script>
 
   </body>
 </html>
-
-
-
-
-       <!--  
-      <div>
-        <div id ="box" class="box">
-          <div class="Färg">
-            <label for ="color">Färg</label>
-            <input type="text" name="color" id="color"class="textfield"/>
-          </div>
-          
-          <div class="Innehåll">
-            <label for="content">Innehåll</label>
-            <input type="text" namn="content" id="content" class="textfield"/>
-          </div>
-          
-          
-
-          <button id="button">Ta bort</button>
-          <div id="divruta"></div>
-
-        </div>
-
-      </div>-->
