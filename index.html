@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Ubuntu&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../style.css" />
-    <title>Labb1 - Grupp 21</title>
-  </head>
-<!-- uppgift 1-3 TEST!!!!!-->
-  <body>
+    <link rel="stylesheet" href="styles.css">
+    <title>Labb 1 - Grupp 21</title>
+</head>
+
+<body>
+    <header>
+        <h1>Labb 1 - Grupp 21</h1>
+
+    </header>
+
     <div class="wrapper">
-      <h1>Labb 1 - Grupp 21</h1>
-            <div class= "flex">
-              <div class="input-group">
-                <label  for="content">Innehåll</label>
-                <input  type="text" id="content" name="content" class="textfield"/>
+
+        <div class="box">
+            <label for="color">Färg</label>
+            <input type="text" id="color" name="color" class="textfield" placeholder="skriv önskad färg på rutan (engelska)...">
+        </div>
+
+        <div class="box">
+            <label for="content">Innehåll</label>
+            <input type="text" id="content" name="content" class="textfield" placeholder="skriv önskat innehåll till rutan...">
+        </div>
+        
+        <div class="box checkbox-box">
+            <label for="divStyle">Ändra färg på rutan</label>
+            <input type="checkbox" id="divStyle" name="divStyle" class="checkbox">
+        </div>
+
+        <div class="divruta" id="divruta"></div>
+        <button id="TaBortKnapp" class="button">Ta bort</button>
+
+        
+    
+        
     </div>
 
-         <div class="input-group">
-          <label  for="color">Färg</label>
-          <input  type="text" id="color" name="color" class="textfield" />
-        </div>
 
-        <div class="input-group checkbox">
-          <label for="divStyle">Checkbox</label>
-          <input type="checkbox" namn="divStyle" id="divStyle" class="checkbox"/>
-        </div>
-        <button Id="remove" class="button">Ta bort</button>
-        <div id="output"></div>
-      </form>
-     
     <script src="script.js"></script>
-
-  </body>
+   
+    
+</body>
 </html>

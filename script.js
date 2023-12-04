@@ -1,117 +1,43 @@
-// Uppgift 4-6
-//variabel
-const checkbox = document.querySelector("divStyle");
-const textfield = document.getElementsByClassName('textfield');
-const button = document.getElementsById('button');
-const output = document.getElementById("output");
+//Uppgift 4 - Skapa variabler
 
-function handleInput(e) {
+const textfields = document.getElementsByClassName('textfield');
+const checkbox = document.querySelector('.checkbox');
+const divruta = document.getElementById('divruta');
+const TaBortKnapp = document.getElementById('TaBortKnapp');
+
+
+
+//Uppgift 5 - Skapa en fördefinierad funktion
+// Fördefinierad funktion som eventlyssnare för textfälten
+function handleEvent(e) {
+    // Lagrar name-attributet i en variabel
     const inputName = e.target.name;
     console.log(e.target);
 
-    if(inputName === 'content') {
-        output.innerHTML = e.target.value;
+    if (inputName === 'content') {
+        divruta.innerHTML = e.target.value; // Använder innerHTML för att uppdatera 'output'
     }
 }
 
+
+// Uppgift 6 - Koppla eventlyssnare
+// Koppla eventlyssnare till varje textfält för 'input' eventet
 for (let field of textfields) {
-    field.addEventListener('input', handleInput);
-    field.addEventListener('blur', handleInput);
-
+    field.addEventListener('input', handleEvent); 
 }
 
+// Uppdatera bakgrundsfärgen när kryssrutan ändras
 checkbox.addEventListener('change', function() {
-    const colorInput = textfields[0];
+    // Hämta färginputfältet från samlingen textfields
+    const colorbox = textfields[0];
     if (checkbox.checked) {
-        output.style.backgroundColor = colorInput.value;
-    }
-    else {output.style.backgroundColor = '';
+        divruta.style.backgroundColor = colorbox.value;
+    } else {
+        divruta.style.backgroundColor = ''; // Återställ bakgrundsfärgen om avmarkerad
     }
 });
 
-button.addEventListener('click', function() {
-    output.remove();
-    console.log('DIV:en "output" borttagen');
+TaBortKnapp.addEventListener('click', function() {
+    divruta.remove();
+    console.log('Divrutan är tom');
 });
-/*
-console.log(checkbox);
-console.log(dynamicDisplay);
-console.log(button);
-console.log(inputField);
-
-
-
-checkbox.addEventListener('change', function() {
-    for (let inputfield of inputgroup) {
-       if (inputField.name ==='color') {
-        dynamicDisplay.style.background = inputfield.value;
-      // messageBox.style.backgroundColor = textfield[0].value;
-       //button.style.backgroundcolor = textfield[0].value;
-       }
-   }
-}
-);
-
-
-//funktion
-function Eventhandle(e) {
-    console.log("Event triggered", e.target);
-    const fieldName = inputField;
-
-    /*
-    //console.log(e.target.name);//
-    if (e.target.name ==='content') {
-        const textinnehåll = e.target.value;
-        divruta.innerHTML = textinnehåll;
-    }
-} */
-/*
-const section = document.querySelector('.textfield');
-section.addEventListener('text',Eventhandle)
-
-//function createBox(content){
-  //  const newElement =document.createElement('div');
-  //  newElement.classList.add('message');
-  //  newElement.innerHTML =content;
-  //  divruta.insertAdjacentElement('afterbegin', newElement);
-//}
-    //eventlyssnare till checkbox
-checkbox.addEventListener('change', function() {
-         for (let textfield of text) {
-            if (textfield.name ==='color') {
-             divruta.style.background = textfield.value;
-           // messageBox.style.backgroundColor = textfield[0].value;
-            //button.style.backgroundcolor = textfield[0].value;
-            }
-        }
-    }
-);
-   // else{
-      //  messageBox.style.backgroundcolor = "transparent";
-    //}
-//});
- 
-for (let textfield of text) {
-    textfield.addEventListener(
-        'keydown', Eventhandle
-    );
-}
-
-
-eventlyssnare till knapp
-button.addEventListener('click', () =>
-    divruta.remove()); */
-     
-
-/*inputField.forEach((field) => field.addEventListener('blur', handleBlur));
-
-for (let i = 0; i < button.length; i++) {
-  button[i].addEventListener('click', handleClick);
-}
-const output = document.getElementById('output');
-function handleBlur(e) {
-  const name = e.target.name;
-  const value = e.target.value;
-  
-}
- */
