@@ -1,4 +1,4 @@
-//Uppgift 4 - Skapa variabler
+//Uppgift 4 - Skapa variabler,
 
 const textfields = document.getElementsByClassName('textfield');
 const checkbox = document.querySelector('.checkbox');
